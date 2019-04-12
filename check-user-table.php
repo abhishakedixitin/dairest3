@@ -13,6 +13,7 @@ $result = $conn->query($sql);
  echo "<table border=5px solid; bgcolor='white' width=100%; height=50%; cellpadding=20%>";
  echo "<tr>";
  	echo "<th>ID</td>";
+    echo "<th>User_Type</td>";
  	echo "<th>USERNAME</td>";
  	echo "<th>PASSWORD</td>";
  	echo "<th>MOBILE</td>";
@@ -21,6 +22,7 @@ $result = $conn->query($sql);
  while($row = $result->fetch_assoc()) {
  	echo "<tr>";
           echo "<td align=center>".$row["id"] ."</td>"
+              ."<td align=center>".$row["u_acct_type"] ."</td>"
               ."<td align=center>".$row["username"] ."</td>"
               ."<td align=center>".$row["password"] ."</td>"
               ."<td align=center>".$row["mobile"] ."</td>"
